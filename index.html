@@ -2,151 +2,157 @@
 
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- Meta tag viewport para un diseño responsivo -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CDN para utilizar la librería de Boostrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- Este CDN da acceso a los iconos de Boostrap usados en el footer -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-        <!-- Link a mis estilos CSS propios -->
-        <link href="./styles/styles.css" rel="stylesheet">
-        <title>La web de Agustín Comolli</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag viewport para un diseño responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN para utilizar la librería de Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Este CDN da acceso a los iconos de Boostrap usados en el footer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Link a mis estilos CSS propios -->
+    <link href="./styles/styles.css" rel="stylesheet">
+    <!-- Info para compartir por WhatsApp o Telegram -->
+    <meta property="og:title" content="Agustín Comolli">
+    <meta property="og:description" content="Soporte en tecnología informática para tu día a día.">
+    <meta property="og:image" content="./images/logo.png">
+    <!-- Icono -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>La web de Agustín Comolli</title>
+</head>
 
-    <body>
-        <header>
-            <!-- Barra de navegación, componente de Boostrap -->
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#" title="Tu aliado informático">
-                        <img id="logo" src="./images/logo.png" alt="Logo" class="d-inline-block align-middle">
-                        Agustín Comolli
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">Acerca de</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./services.html">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
+<body>
+    <header>
+        <!-- Barra de navegación, componente de Boostrap -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" title="Tu aliado informático">
+                    <img id="logo" src="./images/logo.png" alt="Logo" class="d-inline-block align-middle">
+                    Agustín Comolli
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <main class="container mt-3 mb-5">
-            <h1>Soluciones en Tecnología</h1>
-            <div class="row">
-                <section class="col-md-8 order-first">
-                    <h3>Un poco sobre mí</h3>
-                    <p>
-                        Con mi experiencia en reparación de computadoras y recuperación de datos, certificaciones de
-                        Apple y Microsoft y mi amor por todo lo geek, soy la solución de Houston a todos sus problemas
-                        tecnológicos. Redes domésticas y de pequeñas empresas, reparación de computadoras, copias de
-                        seguridad, recuperación de datos... Cualquiera que sea su problema tecnológico, lo tengo
-                        cubierto.
-                    </p>
-                    <p>
-                        Sé lo intimidante que puede ser tu computadora, así que déjame ayudarte. ¿Por qué pasar el día
-                        tratando de resolver tus problemas técnicos cuando puedo ponerte en línea en poco
-                        tiempo? ¡Llama! Déjame hacer el trabajo para que puedas relajarte y disfrutar.
-                    </p>
-                </section>
-                <aside class="col-md-4 md-5 order-last mb-5">
-                    <img src="./images/hands-on-keyboard[1].webp" class="img-fluid w-100">
-                </aside>
             </div>
-            <div class="row justify-content-center">
-                <!-- Accordion, componente de Boostrap que se oculta o muestra según preferencia del usuario. -->
-                <div class="accordion col-md-10" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Soporte Técnico Único
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="row justify-content-center mt-3">
-                                    <div class="col-12 col-md-5">
-                                        <ul class="pb-0 mb-0">
-                                            <li class="our-services-item">Networking - Hogar y negocios</li>
-                                            <li class="our-services-item">Soporte e instalación de PC</li>
-                                            <li class="our-services-item">Copia de seguridad</li>
-                                            <li class="our-services-item">Recuperación de datos</li>
-                                            <li class="our-services-item">Soporte remoto</li>
-                                            <li class="our-services-item">Soporte para Smart Phones</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <ul>
-                                            <li class="our-services-item">Reparación de PC</li>
-                                            <li class="our-services-item">Consultoría</li>
-                                            <li class="our-services-item">Soluciones de TI</li>
-                                            <li class="our-services-item">Formación</li>
-                                            <li class="our-services-item">Seguridad de internet</li>
-                                        </ul>
-                                    </div>
+        </nav>
+    </header>
+
+    <main class="container mt-3 mb-5">
+        <h1>Soluciones en Tecnología</h1>
+        <div class="row">
+            <section class="col-md-8 order-first">
+                <h3>Un poco sobre mí</h3>
+                <p>
+                    Con mi experiencia en reparación de computadoras y recuperación de datos, certificaciones de
+                    Apple y Microsoft y mi amor por todo lo geek, soy la solución de Houston a todos sus problemas
+                    tecnológicos. Redes domésticas y de pequeñas empresas, reparación de computadoras, copias de
+                    seguridad, recuperación de datos... Cualquiera que sea su problema tecnológico, lo tengo
+                    cubierto.
+                </p>
+                <p>
+                    Sé lo intimidante que puede ser tu computadora, así que déjame ayudarte. ¿Por qué pasar el día
+                    tratando de resolver tus problemas técnicos cuando puedo ponerte en línea en poco
+                    tiempo? ¡Llama! Déjame hacer el trabajo para que puedas relajarte y disfrutar.
+                </p>
+            </section>
+            <aside class="col-md-4 md-5 order-last mb-5">
+                <img src="./images/hands-on-keyboard[1].webp" class="img-fluid w-100">
+            </aside>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Accordion, componente de Boostrap que se oculta o muestra según preferencia del usuario. -->
+            <div class="accordion col-md-10" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Soporte Técnico Único
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-12 col-md-5">
+                                    <ul class="pb-0 mb-0">
+                                        <li class="our-services-item">Networking - Hogar y negocios</li>
+                                        <li class="our-services-item">Soporte e instalación de PC</li>
+                                        <li class="our-services-item">Copia de seguridad</li>
+                                        <li class="our-services-item">Recuperación de datos</li>
+                                        <li class="our-services-item">Soporte remoto</li>
+                                        <li class="our-services-item">Soporte para Smart Phones</li>
+                                    </ul>
                                 </div>
-                                <p class="text-end"><a href="./services.html">Más...</a></p>
+                                <div class="col-12 col-md-4">
+                                    <ul>
+                                        <li class="our-services-item">Reparación de PC</li>
+                                        <li class="our-services-item">Consultoría</li>
+                                        <li class="our-services-item">Soluciones de TI</li>
+                                        <li class="our-services-item">Formación</li>
+                                        <li class="our-services-item">Seguridad de internet</li>
+                                    </ul>
+                                </div>
                             </div>
+                            <p class="text-end"><a href="./services.html">Más...</a></p>
                         </div>
                     </div>
                 </div>
-        </main>
+            </div>
+    </main>
 
-        <footer class="bg-dark text-light pt-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <h5 class="brand-footer">Agustín Comolli</h5>
-                        <h6>Tu aliado informático</h6>
-                    </div>
-                    <div class="col-6 text-end">
-                        <h6><span class="me-2">Redes Sociales:</span>
-                            <div class="d-flex d-md-inline-flex flex-wrap justify-content-end">
-                                <a href="https://www.facebook.com/agustincomolli" title="Sígueme en Facebook"
-                                    class="text-light me-2">
-                                    <i class="bi bi-facebook"></i>
-                                </a>
-                                <a href="https://twitter.com/agustincomolli" title="Sígueme en Twitter"
-                                    class="text-light me-2">
-                                    <i class="bi bi-twitter"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/agustincomolli/" title="Sígueme en LinkedIn"
-                                    class="text-light me-2">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                        </h6>
-                        <h6><i class="bi bi-telephone-fill me-2"></i> 02226 - 680056</h6>
-                    </div>
+    <footer class="bg-dark text-light pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="brand-footer">Agustín Comolli</h5>
+                    <h6>Tu aliado informático</h6>
                 </div>
-                <div class="copyright row">
-                    <p class="text-center"><small>&copy 2024 - Creado por Agustín Comolli</small></p>
+                <div class="col-6 text-end">
+                    <h6><span class="me-2">Redes Sociales:</span>
+                        <div class="d-flex d-md-inline-flex flex-wrap justify-content-end">
+                            <a href="https://www.facebook.com/agustincomolli" title="Sígueme en Facebook"
+                                class="text-light me-2">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/agustincomolli" title="Sígueme en Twitter"
+                                class="text-light me-2">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/agustincomolli/" title="Sígueme en LinkedIn"
+                                class="text-light me-2">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </h6>
+                    <h6><i class="bi bi-telephone-fill me-2"></i> 02226 - 680056</h6>
                 </div>
             </div>
-        </footer>
-    </body>
+            <div class="copyright row">
+                <p class="text-center"><small>&copy 2024 - Creado por Agustín Comolli</small></p>
+            </div>
+        </div>
+    </footer>
+</body>
 
 </html>
