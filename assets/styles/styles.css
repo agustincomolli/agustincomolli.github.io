@@ -26,6 +26,20 @@
     url("../fonts/Montserrat.ttf") format("truetype");
 }
 
+body {
+  /* Distribuir los elementos header, main y footer en columnas y centrar todo. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Hacer que el body ocupe un mínimo de todo el alto de la pantalla. */
+  min-height: 100dvh;
+}
+
+main {
+  /* Establecer que la sección main ocupe todo lo que sobre de la pantalla. */
+  flex: 1;
+}
+
 a {
   /* Elimina el subrayado de los enlaces */
   text-decoration: none;
