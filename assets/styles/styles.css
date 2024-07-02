@@ -33,6 +33,7 @@ body {
   justify-content: center;
   /* Hacer que el body ocupe un mínimo de todo el alto de la pantalla. */
   min-height: 100dvh;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
