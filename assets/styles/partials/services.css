@@ -1,0 +1,31 @@
+.service-table th,
+.service-table td {
+  padding: 8px;
+}
+
+.service-table-header {
+  background-color: #717070;
+  color: #f3f3f3;
+}
+
+.admin-service-description {
+  text-align: justify;
+  /* word-break: Indica si se pueden partir palabras de forma natural. */
+  word-break: break-word;
+  /* hyphens: Indica si se debe dividir las palabras por guiones. */
+  hyphens: auto;
+  padding-right: 1rem;
+  width: 70%;
+}
+
+.service-row {
+  vertical-align: top;
+}
+
+.service-row:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.service-row:nth-child(even) {
+  background-color: #d6d6d6;
+}
