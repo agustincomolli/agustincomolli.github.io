@@ -31,7 +31,13 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" title="Tu aliado informático">
-                    <img id="logo" src="./assets/images/logo.png" alt="Logo" class="d-inline-block align-middle">
+                    <!-- 
+                        Atributo loading="lazy":
+                            Mejora del rendimiento.
+                            Las páginas se cargan más rápido porque solo se cargan los recursos necesarios inicialmente.
+                     -->
+                    <img id="logo" src="./assets/images/logo.png" alt="Logo" class="d-inline-block align-middle"
+                        loading="lazy">
                     Agustín Comolli
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -80,7 +86,7 @@
                 </p>
             </section>
             <aside class="col-md-4 md-5 order-last mb-5">
-                <img src="./assets/images/hands-on-keyboard[1].webp" class="img-fluid w-100">
+                <img src="./assets/images/hands-on-keyboard[1].webp" class="img-fluid w-100" loading="lazy">
             </aside>
         </div>
         <div class="row justify-content-center">
@@ -129,7 +135,7 @@
     <aside class="whatsapp-wrapper">
         <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=5492226680056" target="_blank"
             title="¡Vamos a chatear!">
-            <img src="./assets/images/chat.svg" alt="">
+            <img src="./assets/images/chat.svg" alt="" loading="lazy">
         </a>
     </aside>
 
