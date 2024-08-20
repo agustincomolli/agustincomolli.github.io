@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag viewport para un diseño responsivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CDN para utilizar la librería de Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" inte
-        grity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Este CDN da acceso a los iconos de Boostrap usados en el footer -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <!-- Link a mis estilos CSS propios -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="./assets/styles/styles.css" rel="stylesheet">
     <title>La web de Agustín Comolli</title>
 </head>
@@ -56,154 +48,87 @@
 
     <main class="container my-3 col-md-10">
         <h2>Servicios</h2>
-        <table class="service-table mb-5">
-            <thead class="service-row">
-                <tr>
-                    <th class="admin-service-name service-table-header">Nombre</th>
-                    <th class="admin-service-description service-table-header">Descripción</th>
-                </tr>
-            </thead>
-            <tbody class="services-list">
-                <tr class="service-row">
-                    <td class="admin-service-name">Diagnóstico y Resolución de Fallas</td>
-                    <td class="admin-service-description pb-2">
-                        Ofrezco servicios de diagnóstico y resolución de
-                        fallas de manera eficiente, utilizando las últimas herramientas y técnicas para identificar
-                        y solucionar problemas en sus sistemas, asegurando un funcionamiento óptimo.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Instalación de Sistemas Operativos</td>
-                    <td class="admin-service-description pb-2">
-                        Realizo instalaciones personalizadas de sistemas
-                        operativos, configurando y optimizando cada aspecto para satisfacer sus necesidades
-                        específicas y garantizar un rendimiento sin problemas.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Eliminación de Malware</td>
-                    <td class="admin-service-description pb-2">
-                        Protejo sus sistemas y datos mediante la detección y
-                        eliminación exhaustiva de virus, spyware y otras amenazas de malware, utilizando las últimas
-                        herramientas de seguridad y procedimientos probados.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Actualización de Sistema</td>
-                    <td class="admin-service-description pb-2">
-                        Mantengo sus sistemas actualizados con las últimas
-                        revisiones de software, parches de seguridad y actualizaciones, asegurando el máximo
-                        rendimiento, estabilidad y protección.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Limpieza Física de los Equipos</td>
-                    <td class="admin-service-description pb-2">
-                        Ofrezco servicios de limpieza física exhaustiva para
-                        equipos informáticos, utilizando técnicas y herramientas especializadas para eliminar el
-                        polvo y la suciedad acumulada, prolongando la vida útil de los componentes.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Instalación de Hardware</td>
-                    <td class="admin-service-description pb-2">
-                        Realizo instalaciones profesionales de hardware,
-                        desde componentes individuales hasta sistemas completos, asegurando una integración perfecta
-                        y un funcionamiento óptimo.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Instalación y Configuración de Software</td>
-                    <td class="admin-service-description pb-2">
-                        Ofrezco servicios de instalación y configuración de
-                        software a medida, adaptando cada solución a sus requisitos empresariales o personales,
-                        desde aplicaciones estándar hasta soluciones personalizadas.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Networking</td>
-                    <td class="admin-service-description pb-2">
-                        Proporciono servicios de redes confiables, incluyendo
-                        instalación, configuración y mantenimiento de redes cableadas e inalámbricas, asegurando una
-                        conectividad óptima y segura.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Instalación y Reparación de Sistemas Operativos</td>
-                    <td class="admin-service-description pb-2">
-                        Ofrezco servicios expertos en instalación, reparación
-                        y configuración de sistemas operativos, ya sea Windows, macOS o Linux, optimizando el
-                        rendimiento y la estabilidad de sus equipos.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Configuración y Mantenimiento de Servidores</td>
-                    <td class="admin-service-description pb-2">
-                        Gestiono y mantengo servidores de manera profesional,
-                        asegurando un flujo constante de datos, servicios y aplicaciones, así como una alta
-                        disponibilidad y rendimiento.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Instalación de Antivirus y Programas de Seguridad</td>
-                    <td class="admin-service-description pb-2">
-                        Protejo sus sistemas críticos mediante la
-                        implementación de soluciones de seguridad líderes en el mercado, incluyendo antivirus,
-                        firewalls y programas de seguridad, manteniendo sus datos y privacidad a salvo.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Gestión de Redes y Sistemas</td>
-                    <td class="admin-service-description pb-2">Ofrezco servicios de gestión y administración de
-                        redes y sistemas informáticos, monitoreando, optimizando y asegurando un funcionamiento
-                        continuo y eficiente.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Reparación de Computadoras y Notebooks</td>
-                    <td class="admin-service-description pb-2">
-                        Realizo reparaciones integrales de hardware y
-                        software en computadoras y notebooks, utilizando técnicas y herramientas avanzadas para
-                        restaurar el correcto funcionamiento de sus equipos.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Backups de los Datos de tu Empresa</td>
-                    <td class="admin-service-description pb-2">
-                        Implemento soluciones de backup y recuperación de
-                        datos confiables y escalables, garantizando la protección y disponibilidad de su información
-                        crítica en caso de incidentes o desastres.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Asesoramiento y Consultoría</td>
-                    <td class="admin-service-description pb-2">
-                        Brindo asesoramiento y consultoría profesional en
-                        tecnologías de la información, ayudándole a tomar decisiones informadas y estratégicas para
-                        optimizar sus procesos y operaciones.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Asesoramiento en Software Legal y Licenciamiento</td>
-                    <td class="admin-service-description pb-2">
-                        Ofrezco orientación experta en materia de
-                        licenciamiento y cumplimiento de software, garantizando que su organización cumpla con las
-                        regulaciones y estándares legales aplicables.
-                    </td>
-                </tr>
-                <tr class="service-row">
-                    <td class="admin-service-name">Soporte Remoto</td>
-                    <td class="admin-service-description pb-2">
-                        Proporciono servicios de soporte técnico remoto
-                        utilizando herramientas seguras como RustDesk, AnyDesk o TeamViewer, brindando asistencia
-                        inmediata y eficiente sin importar su ubicación.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row">
+            <!-- Tarjeta: Soporte Técnico Remoto -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/remote-tech-support.webp" class="card-img-top service-card-img-top"
+                        alt="Soporte Técnico Remoto">
+                    <div class="card-body service-card-body">
+                        <h5 class="card-title service-card-title">Soporte Técnico Remoto</h5>
+                        <p class="card-text service-card-text">Asistencia remota para resolver problemas de software.
+                            Instalación y configuración de programas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Servicio de Reparación de Hardware -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/hardware-repair-service.webp" class="card-img-top service-card-img-top"
+                        alt="Servicio de Reparación de Hardware">
+                    <div class="card-body">
+                        <h5 class="card-title service-card-title">Servicio de Reparación de Hardware</h5>
+                        <p class="card-text service-card-text">Reparación de computadoras de escritorio. Reparación de
+                            laptops y notebooks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Servicios de Mantenimiento Preventivo -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/preventative-maintenance-services.webp"
+                        class="card-img-top service-card-img-top" alt="Servicios de Mantenimiento Preventivo">
+                    <div class="card-body service-card-body">
+                        <h5 class="card-title service-card-title">Servicios de Mantenimiento Preventivo</h5>
+                        <p class="card-text service-card-text">Limpieza interna de equipos. Optimización de sistemas
+                            operativos. Actualización de software y controladores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Servicios de Redes y Conectividad -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/networking-and-connectivity-services.webp"
+                        class="card-img-top service-card-img-top" alt="Servicios de Redes y Conectividad">
+                    <div class="card-body service-card-body">
+                        <h5 class="card-title service-card-title">Servicios de Redes y Conectividad</h5>
+                        <p class="card-text service-card-text">Configuración de redes domésticas. Configuración de redes
+                            empresariales. Solución de problemas de conectividad (WiFi, LAN, etc.).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Servicios Especializados -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/specialized-services.webp" class="card-img-top service-card-img-top"
+                        alt="Servicios Especializados">
+                    <div class="card-body service-card-body">
+                        <h5 class="card-title service-card-title">Servicios Especializados</h5>
+                        <p class="card-text service-card-text">Instalación y configuración de servidores. Seguridad
+                            informática y protección contra virus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Consultoría y Asesoría Técnica -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/consulting-and%20technical-assistance.webp"
+                        class="card-img-top service-card-img-top" alt="Consultoría y Asesoría Técnica">
+                    <div class="card-body service-card-body">
+                        <h5 class="card-title service-card-title">Consultoría y Asesoría Técnica</h5>
+                        <p class="card-text service-card-text">Evaluación de necesidades tecnológicas. Recomendaciones
+                            de actualización de hardware y software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Icono de WhatsApp -->
     <aside class="whatsapp-wrapper">
         <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=5492226680056" target="_blank"
             title="¡Vamos a chatear!">
@@ -222,17 +147,11 @@
                     <h6><span class="me-2">Redes Sociales:</span>
                         <div class="d-flex d-md-inline-flex flex-wrap justify-content-end">
                             <a href="https://www.facebook.com/agustincomolli" title="Sígueme en Facebook"
-                                class="text-light me-2">
-                                <i class="bi bi-facebook"></i>
-                            </a>
+                                class="text-light me-2"><i class="bi bi-facebook"></i></a>
                             <a href="https://twitter.com/agustincomolli" title="Sígueme en Twitter"
-                                class="text-light me-2">
-                                <i class="bi bi-twitter"></i>
-                            </a>
+                                class="text-light me-2"><i class="bi bi-twitter"></i></a>
                             <a href="https://www.linkedin.com/in/agustincomolli/" title="Sígueme en LinkedIn"
-                                class="text-light me-2">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
+                                class="text-light me-2"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </h6>
                     <h6><i class="bi bi-telephone-fill me-2"></i> 02226 - 680056</h6>

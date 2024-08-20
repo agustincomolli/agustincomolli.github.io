@@ -1,31 +1,56 @@
-.service-table th,
-.service-table td {
-  padding: 8px;
+/* Estilo de las tarjetas */
+.service-card {
+  border-radius: 10px;
+  /* Bordes redondeados */
+  background-color: #f8f9fa;
+  /* Color de fondo */
+  overflow: hidden;
+  /* Oculta el desbordamiento */
+  height: 350px;
+  /* Altura fija para todas las tarjetas */
+  display: flex;
+  /* Flexbox para forzar el contenido a adaptarse */
+  flex-direction: column;
+  /* Alineación vertical del contenido */
+  justify-content: space-between;
+  /* Espacio uniforme entre elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar profundidad */
+  transition: transform 0.3s;
+  /* Transición suave */
 }
 
-.service-table-header {
-  background-color: #717070;
-  color: #f3f3f3;
+.service-card-img-top {
+  height: 150px;
+  /* Altura fija para la imagen */
+  object-fit: cover;
+  /* Ajusta la imagen */
 }
 
-.admin-service-description {
-  text-align: justify;
-  /* word-break: Indica si se pueden partir palabras de forma natural. */
-  word-break: break-word;
-  /* hyphens: Indica si se debe dividir las palabras por guiones. */
-  hyphens: auto;
-  padding-right: 1rem;
-  width: 70%;
+.service-card-body {
+  padding: 10px;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centra el contenido del texto */
 }
 
-.service-row {
-  vertical-align: top;
+h5.service-card-title {
+  font-weight: bold;
+  /* Peso de la fuente */
+  color: #343a40;
+  /* Color de texto */
+  margin-bottom: 0.5rem;
+  /* Espaciado inferior */
 }
 
-.service-row:nth-child(odd) {
-  background-color: #f3f3f3;
+.service-card-text {
+  flex-grow: 1;
+  /* Ocupa el espacio restante */
+  font-size: 0.9em;
+  /* Tamaño de fuente un poco más pequeño */
 }
 
-.service-row:nth-child(even) {
-  background-color: #d6d6d6;
+.service-card:hover {
+  transform: scale(1.05);
+  /* Escala al pasar el ratón */
 }
