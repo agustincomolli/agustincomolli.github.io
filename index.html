@@ -1,175 +1,187 @@
 <!DOCTYPE html>
-
-<html lang="es">
-
+<html lang="es-AR" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <!-- Meta tag viewport para un diseño responsivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CDN para utilizar la librería de Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Este CDN da acceso a los iconos de Boostrap usados en el footer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <!-- Link a mis estilos CSS propios -->
-    <link href="./assets/styles/styles.css" rel="stylesheet">
-    <!-- Info para compartir por WhatsApp o Telegram -->
-    <meta property="og:title" content="Agustín Comolli">
-    <meta property="og:description" content="Soporte en tecnología informática para tu día a día.">
-    <meta property="og:image" content="https://agustincomolli.github.io/images/logo.png">
-    <!-- Icono -->
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
-    <title>La web de Agustín Comolli</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agustín Comolli</title>
+  <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/bootstrap.css">
+  <link rel="stylesheet" href="./styles/bootstrap-icons.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
-
-<body>
-    <header>
-        <!-- Barra de navegación, componente de Boostrap -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" title="Tu aliado informático">
-                    <!-- 
-                        Atributo loading="lazy":
-                            Mejora del rendimiento.
-                            Las páginas se cargan más rápido porque solo se cargan los recursos necesarios inicialmente.
-                     -->
-                    <img id="logo" src="./assets/images/logo.png" alt="Logo" class="d-inline-block align-middle">
-                    Agustín Comolli
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">Acerca de</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./services.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./programming.html">Programación</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container mt-3 mb-5">
-        <h1>Soluciones en Tecnología</h1>
-        <div class="row">
-            <section class="col-md-8 order-first">
-                <h3>Un poco sobre mí</h3>
-                <p>
-                    Con mi experiencia en reparación de computadoras y recuperación de datos, certificaciones de
-                    Apple y Microsoft y mi amor por todo lo geek, soy la solución de Houston a todos sus problemas
-                    tecnológicos. Redes domésticas y de pequeñas empresas, reparación de computadoras, copias de
-                    seguridad, recuperación de datos... Cualquiera que sea su problema tecnológico, lo tengo
-                    cubierto.
-                </p>
-                <p>
-                    Sé lo intimidante que puede ser tu computadora, así que déjame ayudarte. ¿Por qué pasar el día
-                    tratando de resolver tus problemas técnicos cuando puedo ponerte en línea en poco
-                    tiempo? ¡Llama! Déjame hacer el trabajo para que puedas relajarte y disfrutar.
-                </p>
-            </section>
-            <aside class="col-md-4 md-5 order-last mb-5">
-                <img src="./assets/images/hands-on-keyboard[1].webp" class="img-fluid w-100">
-            </aside>
-        </div>
-        <div class="row justify-content-center">
-            <!-- Accordion, componente de Boostrap que se oculta o muestra según preferencia del usuario. -->
-            <div class="accordion col-md-10" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Soporte Técnico Único
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div class="row justify-content-center mt-3">
-                                <div class="col-12 col-md-5">
-                                    <ul class="pb-0 mb-0">
-                                        <li class="our-services-item">Networking - Hogar y negocios</li>
-                                        <li class="our-services-item">Soporte e instalación de PC</li>
-                                        <li class="our-services-item">Copia de seguridad</li>
-                                        <li class="our-services-item">Recuperación de datos</li>
-                                        <li class="our-services-item">Soporte remoto</li>
-                                        <li class="our-services-item">Soporte para Smart Phones</li>
-                                    </ul>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <ul>
-                                        <li class="our-services-item">Reparación de PC</li>
-                                        <li class="our-services-item">Consultoría</li>
-                                        <li class="our-services-item">Soluciones de TI</li>
-                                        <li class="our-services-item">Formación</li>
-                                        <li class="our-services-item">Seguridad de internet</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="text-end"><a href="./services.html">Más...</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-    </main>
-
-    <!-- Icono de WhatsApp -->
-    <aside class="whatsapp-wrapper">
-        <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=5492226680056" target="_blank"
-            title="¡Vamos a chatear!">
-            <img src="./assets/images/chat.svg" alt="" loading="lazy">
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo.png" class="rounded-2" alt="Logotipo" height="48">
+          <span class="ms-2">Agustín Comolli</span>
         </a>
-    </aside>
-
-    <footer class="bg-dark text-light pt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h5 class="brand-footer">Agustín Comolli</h5>
-                    <h6>Tu aliado informático</h6>
-                </div>
-                <div class="col-6 text-end">
-                    <h6><span class="me-2">Redes Sociales:</span>
-                        <div class="d-flex d-md-inline-flex flex-wrap justify-content-end">
-                            <a href="https://www.facebook.com/agustincomolli" title="Sígueme en Facebook"
-                                class="text-light me-2">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com/agustincomolli" title="Sígueme en Twitter"
-                                class="text-light me-2">
-                                <i class="bi bi-twitter"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/agustincomolli/" title="Sígueme en LinkedIn"
-                                class="text-light me-2">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                        </div>
-                    </h6>
-                    <h6><i class="bi bi-telephone-fill me-2"></i> 02226 - 680056</h6>
-                </div>
-            </div>
-            <div class="copyright row">
-                <p class="text-center"><small>&copy 2024 - Creado por Agustín Comolli</small></p>
-            </div>
+        <!-- Menú hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links del menú -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="./skills.html" class="nav-link">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a href="./projects.html" class="nav-link">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button">
+                <i class="bi bi-moon-stars-fill"></i>
+              </button>
+            </li>
+          </ul>
         </div>
-    </footer>
-</body>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section class="container flex-grow-1 my-3 text-center">
+      <h2 class="mb-5">Bienvenido a mi página web</h2>
+      <div class="row gx-5 d-flex mt-2">
+        <div class="col col-sm-5 align-self-center text-sm-end mb-4">
+          <img src="./assets/images/agustincomolli.png" alt="Agustín Comolli"
+            class="img rounded-circle p-2 border border-3" loading="lazy" height="300px">
+        </div>
+        <div class="col col-sm-6 text-start mb-4">
+          <p class="fs-4">
+            Soy Agustín Comolli, un profesional con 24 años de experiencia en soporte IT. Me especializo en brindar
+            soluciones tecnológicas efectivas y personalizadas para satisfacer las necesidades de mis clientes.
+          </p>
+          <p class="fs-4">
+            Algunos de los servicios que ofrezco son:
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="accordion accordion-flush my-4" id="accordionService">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Servicios Especializados
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Instalación y configuración de servidores.</p>
+              <p>Seguridad informática y protección contra virus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Consultoría y Asesoría Técnica
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Evaluación de necesidades tecnológicas.</p>
+              <p>Recomendaciones de actualización de hardware y software.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Soporte Técnico Remoto
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Asistencia remota para resolver problemas de software.</p>
+              <p>Instalación y configuración de programas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Servicios de Redes y Conectividad
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Configuración de redes domésticas.</p>
+              <p>Configuración de redes empresariales.</p>
+              <p>Solución de problemas de conectividad (WiFi, LAN, etc...).</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Servicios de Mantenimiento Preventivo
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Limpieza interna de equipos.</p>
+              <p>Optimización de sistemas operativos.</p>
+              <p>Actualización de software y controladores.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              Servicio de Reparación de Hardware
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Reparación de computadoras de escritorio.</p>
+              <p>Reparación de laptops y notebooks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 ms-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <img src="./assets/images/logo.png" class="rounded-2" alt="Logotipo" height="24">
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Agustín Comolli</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
+      <li class="ms-3">
+        <a class="text-body-secondary" href="https://www.linkedin.com/in/agustincomolli/" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="https://github.com/agustincomolli" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="https://wa.me/+5492226680056" title="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="./scripts/bootstrap.bundle.js"></script>
+  <script src="./scripts/change-theme.js"></script>
+</body>
 </html>

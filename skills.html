@@ -30,13 +30,13 @@
               <a href="./index.html" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
-              <a href="./skills.html" class="nav-link">Habilidades</a>
+              <a href="#" class="nav-link active" aria-current="page">Habilidades</a>
             </li>
             <li class="nav-item">
               <a href="./projects.html" class="nav-link">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">Contacto</a>
+              <a href="./contact.html" class="nav-link">Contacto</a>
             </li>
             <li class="nav-item">
               <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button">
@@ -51,44 +51,65 @@
 
   <main>
     <section class="container flex-grow-1 my-3 text-center">
-      <h2 class="mb-4">Contacto</h2>
-      <p class="mb-5">Completá el formulario a continuación y me pondré en contacto lo antes posible.</p>
-      <div class="row d-flex justify-content-center">
-        <form id="contact-form" class="col-6 mx-3" action="https://formspree.io/f/xrgnwwed" method="POST">
-          <div class="row mb-4">
-            <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre completo"
-              aria-label="Nombre">
-          </div>
-          <div class="row mb-4">
-            <input type="email" class="form-control" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
-          </div>
-          <div class="row mb-4">
-            <textarea class="form-control" id="comments" name="comments" rows="6"
-              placeholder="Escribe tu mensaje aquí..."></textarea>
-          </div>
-          <div class="row mb-4">
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn btn-secondary">Enviar mensaje</button>
+      <!-- Sección de habilidades técnicas -->
+        <h2 class="mb-4">Mis Habilidades Técnicas</h2>
+        <p class="mb-5">Estas son algunas de las habilidades técnicas que he estado aprediendo:</p>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 mx-auto">
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/terminal.webp" alt="Linux Terminal" class="img-fluid mb-2" loading="lazy">
+              <p>Linux Terminal</p>
             </div>
           </div>
-        </form>
-        <div class="modal fade" id="alert-modal" tabindex="-1" aria-labelledby="alert-title" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="alert-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p class="text-center" id="alert-message">Modal body text goes here.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-              </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/git.webp" alt="Git" class="img-fluid mb-2" loading="lazy">
+              <p>Git</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/github.webp" alt="GitHub" class="img-fluid mb-2" loading="lazy">
+              <p>GitHub</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/html.webp" alt="HTML" class="img-fluid mb-2" loading="lazy">
+              <p>HTML</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/css.webp" alt="CSS" class="img-fluid mb-2" loading="lazy">
+              <p>CSS</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/js.webp" alt="JavaScript" class="img-fluid mb-2" loading="lazy">
+              <p>JavaScript</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/python.webp" alt="Python" class="img-fluid mb-2" loading="lazy">
+              <p>Python</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/boostrap.webp" alt="Bootstrap" class="img-fluid mb-2" loading="lazy">
+              <p>Bootstrap</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="skill-item text-center p-3 rounded">
+              <img src="./assets/images/flask.webp" alt="Flask" class="img-fluid mb-2 dark-theme-img" loading="lazy">
+              <p>Flask</p>
             </div>
           </div>
         </div>
-      </div>
     </section>
   </main>
 
@@ -120,6 +141,5 @@
   </footer>
   <script src="./scripts/bootstrap.bundle.js"></script>
   <script src="./scripts/change-theme.js"></script>
-  <script src="./scripts/send-form.js"></script>
 </body>
 </html>
