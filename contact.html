@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-AR" data-bs-theme="dark">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./styles/bootstrap-icons.css">
   <!-- Estilos propios -->
   <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./scripts/change-theme.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header>
@@ -54,13 +55,13 @@
       <h2 class="mb-4">Contacto</h2>
       <p class="mb-5">Completá el formulario a continuación y me pondré en contacto lo antes posible.</p>
       <div class="row d-flex justify-content-center">
-        <form id="contact-form" class="col-6 mx-3" action="https://formspree.io/f/xrgnwwed" method="POST">
+        <form id="contact-form" class="col-11 col-sm-10 col-md-8 col-lg-6 mx-3" action="https://formspree.io/f/xrgnwwed" method="POST">
           <div class="row mb-4">
             <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre completo"
-              aria-label="Nombre">
+              aria-label="Nombre" autocomplete="on">
           </div>
           <div class="row mb-4">
-            <input type="email" class="form-control" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="tuemail@ejemplo.com" required autocomplete="on">
           </div>
           <div class="row mb-4">
             <textarea class="form-control" id="comments" name="comments" rows="6"
@@ -119,7 +120,6 @@
     </ul>
   </footer>
   <script src="./scripts/bootstrap.bundle.js"></script>
-  <script src="./scripts/change-theme.js"></script>
   <script src="./scripts/send-form.js"></script>
 </body>
 </html>

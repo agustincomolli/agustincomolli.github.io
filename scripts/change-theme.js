@@ -1,43 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const html = document.querySelector("html");
-    const themeToggler = document.querySelector("#theme-toggler");
-    const storedTheme = localStorage.getItem("theme");
-    const storedIconTheme = localStorage.getItem("iconTheme");
+// Función para aplicar el tema inmediatamente
+function applyTheme() {
+    const storedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-bs-theme', storedTheme);
+}
 
-    if (storedTheme) {
-        html.setAttribute("data-bs-theme", storedTheme);
-        themeToggler.innerHTML = storedIconTheme;
-    }
+// Aplicar el tema inmediatamente
+applyTheme();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const themeToggler = document.querySelector("#theme-toggler");
 
     // Función para guardar el tema en Local Storage
     function saveTheme(theme) {
         localStorage.setItem("theme", theme);
-        if (theme == "dark") {
-            saveIconTheme('<i class="bi bi-moon-stars-fill"></i>');
-        } else {
-            saveIconTheme('<i class="bi bi-sun-fill"></i>');
-        };
-        themeToggler.innerHTML = localStorage.getItem("iconTheme");
-};
+        updateThemeToggler(theme);
+    }
 
-    // Función para guardar el icono del tema en Local Storage
-    function saveIconTheme(iconTheme) {
-        localStorage.setItem("iconTheme", iconTheme);
-    };
+    // Función para actualizar el icono del toggler
+    function updateThemeToggler(theme) {
+        themeToggler.innerHTML = theme === 'dark'
+            ? '<i class="bi bi-moon-stars-fill"></i>'
+            : '<i class="bi bi-sun-fill"></i>';
+    }
 
     // Función para cambiar el tema
     function changeTheme(theme) {
         html.setAttribute("data-bs-theme", theme);
         saveTheme(theme);
-    };
+    }
+
+    // Inicializar el toggler con el tema actual
+    const currentTheme = html.getAttribute("data-bs-theme");
+    updateThemeToggler(currentTheme);
 
     themeToggler.addEventListener("click", () => {
-        // Alterna entre un tema oscuro y uno claro.
-        const theme = html.attributes.getNamedItem("data-bs-theme");
-        if (theme && theme.value === "dark") {
-            changeTheme("light");
-        } else {
-            changeTheme("dark");
-        };
-    })
-})
+        const currentTheme = html.getAttribute("data-bs-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        changeTheme(newTheme);
+    });
+});
