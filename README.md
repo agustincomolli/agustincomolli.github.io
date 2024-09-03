@@ -13,10 +13,9 @@ El sitio web es una plataforma que presenta los servicios de soporte técnico y 
 El sitio web consta de las siguientes páginas principales:
 
 1. **Inicio (index.html)**: Página de bienvenida con una breve introducción y resumen de servicios.
-2. **Acerca de (about.html)**: Información detallada sobre la experiencia y trayectoria de Agustín Comolli.
-3. **Servicios (services.html)**: Lista completa de servicios ofrecidos, incluyendo descripciones detalladas.
-4. **Programación (programming.html)**: Información sobre los conocimientos y habilidades de programación de Agustín, incluyendo tecnologías como Linux, Git, GitHub, HTML, CSS, JavaScript, Python, Bootstrap y Flask.
-5. **Contacto (contact.html)**: Formulario de contacto y información de ubicación.
+2. **Habilidades (skills.html)**: Información sobre las habilidades y conocimientos de Agustín Comolli.
+3. **Proyectos (projects.html)**: Muestra de proyectos y trabajos realizados por Agustín Comolli.
+4. **Contacto (contact.html)**: Formulario de contacto y información de ubicación.
 
 ## Tecnologías Utilizadas
 
@@ -29,7 +28,6 @@ El sitio web consta de las siguientes páginas principales:
 ## Características
 
 - Diseño responsivo para una óptima visualización en dispositivos móviles y de escritorio.
-- Integración con Google Maps para mostrar la ubicación.
 - Formulario de contacto funcional utilizando Formspree.
 - Botón de WhatsApp para contacto rápido.
 - Iconos de redes sociales en el pie de página.
