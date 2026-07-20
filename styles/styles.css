@@ -8,16 +8,23 @@
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
-  max-width: 200px; /* Añadir esta línea para limitar el ancho */
-  margin: 0 auto;   /* Centrar el contenido */
+  max-width: 200px;
+  /* Añadir esta línea para limitar el ancho */
+  margin: 0 auto;
+  /* Centrar el contenido */
 }
 
 .skill-item img {
   transition: filter 0.3s;
+  max-height: 60px;
+  width: auto;
+  margin-bottom: 10px;
 }
 
 .skill-item p {
   transition: text-shadow 0.3s;
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Animación de hover para todos menos la imagen de Flask */
@@ -30,17 +37,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.skill-item img {
-  max-height: 60px;
-  width: auto;
-  margin-bottom: 10px;
-}
-
-.skill-item p {
-  margin: 0;
-  font-weight: 500;
-}
-
 .dark-theme-img {
   filter: invert(100%);
   transition: filter 0.3s, transform 0.3s;
@@ -48,7 +44,8 @@
 
 .dark-theme-img:hover {
   transform: scale(1.5);
-  filter: invert(100%); /* Mantén el filtro invertido para que siga siendo blanca */
+  filter: invert(100%);
+  /* Mantén el filtro invertido para que siga siendo blanca */
 }
 
 [data-bs-theme="light"] .dark-theme-img {
