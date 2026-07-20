@@ -1,3 +1,7 @@
+.logo {
+  max-height: 300px;
+}
+
 /* Estilos actualizados para las habilidades técnicas */
 .skill-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
