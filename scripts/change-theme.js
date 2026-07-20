@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             : 'Cambiar a tema oscuro';
 
         themeToggler.innerHTML = `${icon} <span class="visually-hidden">${accessibleText}</span>`;
+        themeToggler.setAttribute('aria-pressed', String(!isDark));
     }
 
     /**
