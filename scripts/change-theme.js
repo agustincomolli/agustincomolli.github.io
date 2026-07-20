@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const html = document.documentElement;
     const themeToggler = document.querySelector("#theme-toggler");
 
+    // Actualiza el año del footer automáticamente, para no tener que
+    // editarlo a mano cada vez que empieza un año nuevo.
+    const copyrightYear = document.querySelector("#copyright-year");
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+    }
+
     /**
      * Guarda el tema elegido en Local Storage, para que persista
      * la próxima vez que el usuario visite el sitio.
