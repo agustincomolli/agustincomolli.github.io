@@ -84,6 +84,20 @@ h3,
   --bs-primary-border-subtle: #6b4a1c;
 }
 
+/* Bootstrap define el color del ítem "activo" de cualquier
+   dropdown (el que usa el submenú "Programación") directamente
+   sobre la clase .dropdown-menu, en azul (#0d6efd) fijo -- por
+   eso pisar --bs-primary no alcanzaba: esa variable vive en un
+   lugar que Bootstrap nunca llega a leer para este caso. La
+   forma segura de pisarlo es apuntar al mismo selector exacto
+   que usa Bootstrap para este estado, con el mismo gris que ya
+   tienen los botones "secondary" del sitio. */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--bs-secondary);
+  color: #fff;
+}
+
 /* Verde de WhatsApp: caso aparte, no es "color de marca", es el
    color que la gente ya asocia de memoria con la app. Queda
    igual en los dos temas a propósito. */
@@ -363,6 +377,99 @@ h3,
 
 [data-bs-theme="light"] .dark-theme-img {
   filter: invert(0);
+}
+
+
+/* -------------------------------------------------------------
+   13. MENÚ MOBILE
+   -------------------------------------------------------------
+   El navbar de Bootstrap, tal cual viene, funciona pero se ve
+   pobre en mobile: los links quedan muy pegados entre sí, el
+   botón de tema quedaba adentro del menú colapsable como un
+   cuadradito chico y descolgado (por eso se movió afuera, al
+   lado del botón hamburguesa -- ver el HTML), y el submenú
+   "Programación" se veía casi igual de chico que el texto de
+   una notificación, muy por debajo del tamaño mínimo recomendado
+   para tocar con el dedo (44px de alto).
+
+   Estas reglas solo aplican por debajo de 992px (el breakpoint
+   "lg" de Bootstrap, que es donde el menú pasa de horizontal a
+   colapsable), usando la misma media query que Bootstrap usa
+   internamente para esa transición.
+   ------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+
+  /* Aire entre la barra de arriba (logo + botones) y el menú
+     desplegado, y entre el menú y el borde del navbar. Antes el
+     menú arrancaba pegado justo debajo de la barra de botones,
+     sin ningún respiro. */
+  .navbar-collapse {
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  /* Texto centrado en vez de alineado a la izquierda -- se ve
+     más prolijo en un menú angosto de mobile, como el de la
+     mayoría de las apps. */
+  .navbar-collapse .nav-link,
+  .navbar-collapse .dropdown-item {
+    text-align: center;
+  }
+
+  /* Cada link ocupa más alto (más fácil de tocar) y tiene una
+     línea sutil abajo que separa un ítem del siguiente -- sin
+     esa línea, tres links en un menú oscuro se sienten como un
+     solo bloque de texto en vez de tres opciones distintas. */
+  .navbar-collapse .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  /* El link activo (la página en la que estás parado) se marca
+     con un fondo de color y el texto en negrita, en vez de la
+     franja lateral de antes -- con el texto centrado, una franja
+     a la izquierda quedaba pegada al texto en vez de leerse como
+     un indicador separado. */
+  .navbar-collapse .nav-link.active,
+  .navbar-collapse .dropdown-toggle.active {
+    background-color: var(--bs-secondary-bg-subtle);
+    color: var(--bs-secondary-text-emphasis);
+    font-weight: 600;
+  }
+
+  /* El submenú "Programación": se le da margen propio (arriba,
+     abajo y a los costados) para que su caja quede claramente
+     separada de todo lo que la rodea -- ya no toca el borde del
+     ítem "Programación" de arriba ni el link "Contacto" de abajo,
+     se ve como un bloque flotante propio, más chico que el ancho
+     total del menú para remarcar que es contenido anidado. */
+  .navbar-collapse .dropdown-menu {
+    background-color: var(--bs-tertiary-bg);
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: none;
+    padding: 0.25rem 0;
+    margin: 0.6rem 0.5rem 1rem;
+    overflow: hidden;
+  }
+
+  .navbar-collapse .dropdown-item {
+    padding: 0.85rem 1rem;
+  }
+
+  /* Línea separadora entre "Habilidades" y "Proyectos", pero no
+     después del último (si no, quedaría una línea pegada al
+     borde redondeado de abajo de la caja). */
+  .navbar-collapse .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  /* Botón de tema: tamaño mínimo cómodo para tocar con el dedo. */
+  #theme-toggler {
+    min-width: 44px;
+    min-height: 38px;
+  }
 }
 
 .skill-item:hover .dark-theme-img {

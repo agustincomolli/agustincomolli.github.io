@@ -41,19 +41,23 @@
           <img src="../assets/images/logo.png" class="rounded-2" alt="Logotipo" height="48">
           <span class="ms-2">Agustín Comolli</span>
         </a>
-        <!-- Menú hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Menú hamburguesa + botón de tema, siempre visibles. -->
+        <div class="d-flex align-items-center order-lg-3">
+          <button type="button" id="theme-toggler" class="btn btn-outline-secondary" data-bs-toggle="button"
+            aria-pressed="false"></button>
+          <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <!-- El submenú "Programación" queda marcado como activo
              (clase "active" + aria-current) porque estamos parados
              en una de sus dos páginas hijas. Adentro del
              desplegable, el ítem "Habilidades" también se marca
              activo, para que quede claro en qué página estás
              incluso con el menú abierto. -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="../index.html" class="nav-link">Inicio</a>
             </li>
@@ -69,10 +73,6 @@
                 <li><a class="dropdown-item active" aria-current="page" href="#">Habilidades</a></li>
                 <li><a class="dropdown-item" href="./projects.html">Proyectos</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button"
-                aria-pressed="false"></button>
             </li>
           </ul>
         </div>

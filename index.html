@@ -43,11 +43,20 @@
           <img src="./assets/images/logo.png" class="rounded-2" alt="Logotipo" height="48">
           <span class="ms-2">Agustín Comolli</span>
         </a>
-        <!-- Menú hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Menú hamburguesa + botón de tema, agrupados afuera del
+             menú colapsable: así el botón de tema queda siempre
+             visible y se puede usar sin necesidad de abrir el menú
+             primero (antes vivía adentro del <ul>, y en mobile
+             quedaba como un cuadradito chico y descolgado debajo de
+             los links). -->
+        <div class="d-flex align-items-center order-lg-3">
+          <button type="button" id="theme-toggler" class="btn btn-outline-secondary" data-bs-toggle="button"
+            aria-pressed="false"></button>
+          <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <!-- Orden del menú: Inicio, Contacto, y un submenú
              desplegable "Programación" que agrupa Habilidades y
              Proyectos. El objetivo del sitio es conseguir clientes
@@ -56,8 +65,8 @@
              ítem, disponible para quien lo busque, sin ocupar dos
              lugares de peso igual a "Contacto" en el menú
              principal. -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="#" class="nav-link active" aria-current="page">Inicio</a>
             </li>
@@ -73,10 +82,6 @@
                 <li><a class="dropdown-item" href="./pages/skills.html">Habilidades</a></li>
                 <li><a class="dropdown-item" href="./pages/projects.html">Proyectos</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button"
-                aria-pressed="false"></button>
             </li>
           </ul>
         </div>

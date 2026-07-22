@@ -41,12 +41,17 @@
           <img src="../assets/images/logo.png" class="rounded-2" alt="Logotipo" height="48">
           <span class="ms-2">Agustín Comolli</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <!-- Menú hamburguesa + botón de tema, siempre visibles. -->
+        <div class="d-flex align-items-center order-lg-3">
+          <button type="button" id="theme-toggler" class="btn btn-outline-secondary" data-bs-toggle="button"
+            aria-pressed="false"></button>
+          <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="../index.html" class="nav-link">Inicio</a>
             </li>
@@ -62,10 +67,6 @@
                 <li><a class="dropdown-item" href="./skills.html">Habilidades</a></li>
                 <li><a class="dropdown-item active" aria-current="page" href="#">Proyectos</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button"
-                aria-pressed="false"></button>
             </li>
           </ul>
         </div>
