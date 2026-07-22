@@ -1,56 +1,505 @@
-/* Estilos actualizados para las habilidades técnicas */
+/* =============================================================
+   ESTILOS PROPIOS - agustincomolli.github.io
+   -------------------------------------------------------------
+   Rediseño completo. Se organiza en:
+   1. Tipografía
+   2. Paleta de color propia (funciona en modo claro y oscuro)
+   3. Layout general / utilidades de espaciado
+   4. Hero
+   5. Insignia de disponibilidad
+   6. "Cómo trabajo" (pasos)
+   7. Servicios (cards)
+   8. Testimonios
+   9. Mapa de cobertura
+   10. Botón flotante de WhatsApp
+   11. Skip-link
+   12. Página de habilidades (heredado, sin cambios de fondo)
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   1. TIPOGRAFÍA
+   -------------------------------------------------------------
+   Dos fuentes de Google Fonts, cada una con un trabajo distinto:
+   - "Sora": para títulos. Es una fuente geométrica, de trazos
+     firmes -- transmite algo más técnico/serio que una fuente
+     redondeada, algo que pega bien con "soporte técnico".
+   - El texto de párrafo NO usa una fuente importada: se deja la
+     fuente del sistema operativo del visitante (la que Bootstrap
+     ya trae por defecto). Es más liviana de cargar y, para
+     bloques largos de texto, se lee más cómodo que una fuente
+     "de diseño".
+   ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+}
+
+
+/* -------------------------------------------------------------
+   2. PALETA DE COLOR PROPIA
+   -------------------------------------------------------------
+   Bootstrap arma TODOS sus componentes (botones, bordes activos,
+   links, focos de teclado) leyendo estas variables. Cambiándolas
+   acá una sola vez, se actualiza el color de todo el sitio sin
+   tocar ninguna clase de Bootstrap en el HTML.
+
+   Elegí un color ámbar/naranja tostado como color principal.
+   Por qué: el celeste de Bootstrap por defecto (#0d6efd) es el
+   color que "delata" un sitio sin personalizar, lo vas a
+   reconocer en miles de sitios hechos con el framework tal cual
+   viene. Un color cálido, además, se aleja del cliché de
+   "tecnología = azul" y se siente más artesanal/humano, algo
+   que ayuda en un servicio donde la confianza personal importa
+   tanto como la parte técnica.
+
+   Se definen dos variantes -- una para tema claro y otra para
+   tema oscuro -- porque un mismo color de acento no siempre se
+   ve igual de bien sobre fondo blanco que sobre fondo oscuro.
+   Bootstrap permite pisar las variables por tema gracias al
+   selector [data-bs-theme="..."], el mismo mecanismo que ya usa
+   change-theme.js para cambiar de tema.
+   ------------------------------------------------------------- */
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #b45309;
+  --bs-primary-rgb: 180, 83, 9;
+  --bs-primary-text-emphasis: #7c3906;
+  --bs-primary-bg-subtle: #fdf0e0;
+  --bs-primary-border-subtle: #f3cf9e;
+}
+
+[data-bs-theme="dark"] {
+  /* Mismo tono, pero más claro/saturado: sobre fondo oscuro un
+     color tan oscuro como el de arriba perdería contraste. */
+  --bs-primary: #f0a13f;
+  --bs-primary-rgb: 240, 161, 63;
+  --bs-primary-text-emphasis: #f6c98a;
+  --bs-primary-bg-subtle: #3a2a12;
+  --bs-primary-border-subtle: #6b4a1c;
+}
+
+/* Verde de WhatsApp: caso aparte, no es "color de marca", es el
+   color que la gente ya asocia de memoria con la app. Queda
+   igual en los dos temas a propósito. */
+:root {
+  --brand-whatsapp: #25d366;
+}
+
+
+/* -------------------------------------------------------------
+   3. LAYOUT GENERAL
+   -------------------------------------------------------------
+   Más "aire" entre secciones que en la versión anterior: cada
+   bloque grande de contenido (hero, proceso, servicios,
+   testimonios, mapa) respira con su propio padding vertical, en
+   vez de quedar todo pegado.
+   ------------------------------------------------------------- */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-padding-sm {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Franjas alternadas: cada dos secciones se les da un fondo
+   sutilmente distinto (usando el color "tertiary" que Bootstrap
+   ya calcula para cada tema), para que el ojo distinga dónde
+   termina un bloque de contenido y empieza el siguiente sin
+   necesidad de líneas divisorias. */
+.section-alt {
+  background-color: var(--bs-tertiary-bg);
+}
+
+
+/* -------------------------------------------------------------
+   4. HERO
+   ------------------------------------------------------------- */
+.hero {
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  color: var(--bs-secondary-color);
+  font-size: 1.15rem;
+}
+
+.hero-photo {
+  max-height: 280px;
+  border: 4px solid var(--bs-primary);
+}
+
+
+/* -------------------------------------------------------------
+   5. INSIGNIA DE DISPONIBILIDAD
+   -------------------------------------------------------------
+   Chip chico que aclara de entrada "trabajo de lunes a viernes"
+   -- responde una pregunta común sin que el visitante tenga que
+   preguntarla, y evita que alguien espere respuesta un sábado.
+   ------------------------------------------------------------- */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50rem;
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-primary-text-emphasis);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.availability-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+}
+
+
+/* -------------------------------------------------------------
+   6. "CÓMO TRABAJO" (PASOS)
+   -------------------------------------------------------------
+   Reduce la incertidumbre de un cliente nuevo mostrando el
+   proceso completo antes de que pregunte "¿y cómo sigue esto?".
+   ------------------------------------------------------------- */
+.step-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+
+/* -------------------------------------------------------------
+   7. SERVICIOS
+   ------------------------------------------------------------- */
+.service-item {
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 1.9rem;
+  color: var(--bs-primary);
+}
+
+
+/* -------------------------------------------------------------
+   8. TESTIMONIOS
+   ------------------------------------------------------------- */
+.testimonial-card {
+  height: 100%;
+  border: 1px solid var(--bs-border-color);
+  border-left: 4px solid var(--bs-primary);
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+
+/* -------------------------------------------------------------
+   9. MAPA DE COBERTURA
+   ------------------------------------------------------------- */
+.coverage-map {
+  border: 0;
+  width: 100%;
+  height: 320px;
+  border-radius: 0.5rem;
+}
+
+
+/* -------------------------------------------------------------
+   10. BOTÓN FLOTANTE DE WHATSAPP
+   -------------------------------------------------------------
+   Fijo en la esquina inferior derecha, visible en las 4 páginas
+   sin importar cuánto se haga scroll.
+   ------------------------------------------------------------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1090;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--brand-whatsapp);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Se le agrega esta clase por JS (whatsapp-float.js) cuando el
+   footer entra en pantalla, para que el botón no tape los
+   íconos de redes del footer. Se usa opacity + pointer-events
+   en vez de display:none, porque display:none no se puede
+   animar con transition (aparecería/desaparecería de golpe, sin
+   el efecto suave). */
+.whatsapp-float--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+
+/* -------------------------------------------------------------
+   11. SKIP-LINK
+   ------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1100;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--bs-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+
+/* -------------------------------------------------------------
+   12. HABILIDADES Y PROYECTOS
+   -------------------------------------------------------------
+   Estilos del rediseño de skills.html y projects.html.
+   ------------------------------------------------------------- */
+
+/* --- Habilidades ---
+   Sin recuadro de card: el logo mismo es el protagonista y
+   "reacciona" al pasar el mouse (se agranda y se le agrega un
+   resplandor con drop-shadow). */
 .skill-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-  max-width: 200px; /* Añadir esta línea para limitar el ancho */
-  margin: 0 auto;   /* Centrar el contenido */
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .skill-item img {
-  transition: filter 0.3s;
-}
-
-.skill-item p {
-  transition: text-shadow 0.3s;
-}
-
-/* Animación de hover para todos menos la imagen de Flask */
-.skill-item:hover img:not(.dark-theme-img) {
-  transform: scale(1.5);
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
-}
-
-.skill-item:hover p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.skill-item img {
-  max-height: 60px;
+  max-height: 64px;
   width: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .skill-item p {
   margin: 0;
   font-weight: 500;
+  transition: text-shadow 0.3s ease;
 }
 
+/* Caso general: todos los logos, MENOS el de Flask (que necesita
+   un tratamiento aparte, ver más abajo). */
+.skill-item:hover img:not(.dark-theme-img) {
+  transform: scale(1.4);
+  filter: drop-shadow(0 6px 12px rgba(var(--bs-primary-rgb), 0.5));
+}
+
+.skill-item:hover p {
+  text-shadow: 1px 1px 6px rgba(var(--bs-primary-rgb), 0.4);
+}
+
+/* --- Caso especial: el logo de Flask ---
+   El logo de Flask es negro sobre fondo transparente, así que en
+   tema oscuro necesita invertirse a blanco para poder verse
+   (por eso tiene la clase .dark-theme-img aparte de .skill-item).
+   El problema: "filter" es UNA sola propiedad -- si una regla le
+   pone "invert(100%)" y otra, por separado, le pone
+   "drop-shadow(...)", la segunda pisa por completo a la primera
+   en vez de sumarse (a diferencia de "transform", donde sí se
+   pueden combinar). Por eso antes, al pasar el mouse por Flask,
+   se perdía el brillo: el filter del hover general nunca llegaba
+   a aplicarse (estaba excluido con :not(.dark-theme-img)), y el
+   filter propio de Flask solo tenía el invert, sin drop-shadow.
+   La solución es escribir el invert Y el drop-shadow juntos dentro
+   de un mismo valor de "filter", una vez para cada tema. */
 .dark-theme-img {
   filter: invert(100%);
-  transition: filter 0.3s, transform 0.3s;
-}
-
-.dark-theme-img:hover {
-  transform: scale(1.5);
-  filter: invert(100%); /* Mantén el filtro invertido para que siga siendo blanca */
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 [data-bs-theme="light"] .dark-theme-img {
   filter: invert(0);
 }
 
-.service-card {
-  width: 18rem;
+.skill-item:hover .dark-theme-img {
+  transform: scale(1.4);
+  filter: invert(100%) drop-shadow(0 6px 12px rgba(var(--bs-primary-rgb), 0.5));
+}
+
+[data-bs-theme="light"] .skill-item:hover .dark-theme-img {
+  filter: invert(0) drop-shadow(0 6px 12px rgba(var(--bs-primary-rgb), 0.5));
+}
+
+/* --- Proyectos ---
+   Card tipo "editorial": la imagen ocupa toda la card, con un
+   degradé oscuro abajo para que el título sea legible encima de
+   cualquier foto, el badge de categoría flotando arriba, y un
+   leve zoom de la imagen al pasar el mouse. */
+.project-card {
+  position: relative;
+  height: 320px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--bs-border-color);
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+.project-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Degradé oscuro de abajo hacia arriba, para que el texto blanco
+   se lea bien sin importar qué colores tenga la captura de
+   pantalla del proyecto. */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0) 75%);
+  pointer-events: none;
+}
+
+.project-card .project-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 50rem;
+}
+
+.project-card-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 1rem 1.1rem;
+}
+
+.project-card-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-card-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
+  /* Recorta la descripción a 2 líneas con puntos suspensivos,
+     así todas las cards de una fila mantienen la misma altura
+     sin importar si un proyecto tiene una descripción más larga
+     que otro. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* El link "Ver en GitHub" ahora ocupa toda la card (ver el
+   href en el <a> que envuelve la card completa en el HTML), así
+   que no hace falta un botón aparte -- toda la card es
+   clickeable. Este ícono es solo la pista visual de que se
+   puede clickear. */
+.project-card-link-icon {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.project-badge--frontend {
+  background-color: var(--bs-info-bg-subtle);
+  color: var(--bs-info-text-emphasis);
+}
+
+.project-badge--backend {
+  background-color: var(--bs-success-bg-subtle);
+  color: var(--bs-success-text-emphasis);
+}
+
+.project-badge--juego {
+  background-color: var(--bs-danger-bg-subtle);
+  color: var(--bs-danger-text-emphasis);
+}
+
+.project-badge--libreria {
+  background-color: var(--bs-purple-bg-subtle, var(--bs-secondary-bg-subtle));
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.project-badge--webapp {
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-primary-text-emphasis);
+}
+
+.project-badge--tema {
+  background-color: var(--bs-warning-bg-subtle);
+  color: var(--bs-warning-text-emphasis);
 }

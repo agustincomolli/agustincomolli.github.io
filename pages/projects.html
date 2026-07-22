@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Proyectos de desarrollo de software de Agustín Comolli: aplicaciones frontend, juegos, APIs backend y librerías, disponibles en GitHub.">
 
-  <meta property="og:title" content="Agustín Comolli">
+  <meta property="og:title" content="Agustín Comolli - Proyectos">
   <meta property="og:description" content="Soporte Técnico Informático y programador">
   <meta property="og:image" content="https://agustincomolli.github.io/assets/images/logo.png">
-  <meta property="og:url" content="https://agustincomolli.github.io">
+  <meta property="og:url" content="https://agustincomolli.github.io/pages/projects.html">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@agustincomolli">
-  <meta name="twitter:title" content="Agustín Comolli">
+  <meta name="twitter:title" content="Agustín Comolli - Proyectos">
   <meta name="twitter:description" content="Soporte Técnico Informático y programador">
   <meta name="twitter:image" content="https://agustincomolli.github.io/assets/images/logo.png">
 
@@ -29,37 +31,41 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+
+  <a class="visually-hidden-focusable skip-link" href="#main-content">Saltar al contenido principal</a>
+
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <img src="../assets/images/logo.png" class="rounded-2" alt="Logotipo" height="48">
           <span class="ms-2">Agustín Comolli</span>
         </a>
-        <!-- Menú hamburguesa -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Links del menú -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a href="../index.html" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
-              <a href="./skills.html" class="nav-link">Habilidades</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">Proyectos</a>
-            </li>
-            <li class="nav-item">
               <a href="./contact.html" class="nav-link">Contacto</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-current="page">
+                Programación
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="./skills.html">Habilidades</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="#">Proyectos</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
-              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button">
-                <i class="bi bi-moon-stars-fill"></i>
-              </button>
+              <button type="button" id="theme-toggler" class="btn btn-outline-secondary ms-3" data-bs-toggle="button"
+                aria-pressed="false"></button>
             </li>
           </ul>
         </div>
@@ -67,150 +73,169 @@
     </nav>
   </header>
 
-  <main>
-    <section class="container flex-grow-1 my-3 text-center">
-      <!-- Sección de proyectos de desarrollo de software -->
-      <h2 class="mb-4">Mis Proyectos</h2>
-      <p class="mb-5">En esta sección encontrara algunos de mis proyectos de desarrollo de software.</p>
-      <div class="row justify-content-center">
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Frontend</div>
-            <img src="../assets/images/mi-tienda-online.webp" class="img-fluid"
-              alt="Vista previa de Mi Tienda Online" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Mi Tienda Online</h5>
-              <p class="card-text">Ecommerce realizado en React.</p>
-              <a href="https://github.com/agustincomolli/mi-tienda-online" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
+  <main id="main-content">
+    <section class="container section-padding-sm text-center">
+      <h1 class="mb-2">Mis Proyectos</h1>
+      <p class="text-body-secondary mb-4">
+        <small>Esta sección es sobre mis proyectos personales de programación.</small>
+      </p>
+      <p class="mb-5">Estos son algunos de mis proyectos de desarrollo de software. Cada card lleva directo al
+        repositorio en GitHub.</p>
+
+      <!-- =======================================================
+           GRILLA DE PROYECTOS
+           -------------------------------------------------------
+           Cada card es un <a> completo (no un botón adentro de la
+           card): toda la superficie es clickeable, con la imagen
+           de fondo, un degradé oscuro para que el título blanco se
+           lea bien encima de cualquier captura, el badge de
+           categoría arriba a la izquierda y un ícono de "salir"
+           arriba a la derecha como pista de que lleva a otro
+           sitio (GitHub).
+           ======================================================= -->
+      <div class="row g-4 justify-content-center text-start">
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/mi-tienda-online" target="_blank"
+            class="project-card">
+            <img src="../assets/images/mi-tienda-online.webp" alt="Vista previa de Mi Tienda Online" loading="lazy">
+            <span class="project-badge project-badge--frontend">Frontend</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">Mi Tienda Online</h2>
+              <p class="project-card-text">Ecommerce realizado en React.</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Juego</div>
-            <img src="../assets/images/terminal-adventure.webp" class="img-fluid"
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/terminal-adventure" target="_blank"
+            class="project-card">
+            <img src="../assets/images/terminal-adventure.webp"
               alt="Vista previa de Terminal Adventure: La Cueva Misteriosa" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Terminal Adventure: La Cueva Misteriosa</h5>
-              <p class="card-text">Juego de aventuras en modo texto.</p>
-              <a href="https://github.com/agustincomolli/terminal-adventure" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
+            <span class="project-badge project-badge--juego">Juego</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">Terminal Adventure</h2>
+              <p class="project-card-text">Juego de aventuras en modo texto: La Cueva Misteriosa.</p>
             </div>
-          </div>
+          </a>
         </div>
-      <div class="row justify-content-center">
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Librería</div>
-            <img src="../assets/images/bit8tools.webp" class="img-fluid"
-              alt="Vista previa de Bit 8 Tools" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Bit 8 Tools</h5>
-              <p class="card-text">Librería para interfaces de consola para Python.</p>
-              <a href="https://github.com/agustincomolli/bit8tools" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Frontend</div>
-            <img src="../assets/images/el-rincon-libros.webp" class="img-fluid"
-              alt="Vista previa de El Rincón de los Libros" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">El Rincón de los Libros</h5>
-              <p class="card-text">Frontend para una tienda de libros.</p>
-              <a href="https://github.com/agustincomolli/el-rincon-libros" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Web App</div>
-            <img src="../assets/images/le-chef.webp" class="img-fluid" alt="Vista previa de le-chef" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Le Chef - Recetas de cocina</h5>
-              <p class="card-text">Aplicación web para almacenar y compartir recetas de cocina.</p>
-              <a href="https://github.com/agustincomolli/le-chef-recetas" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Front End</div>
-            <img src="../assets/images/8-bits.webp" class="img-fluid" alt="Vista previa de 8-bits" loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">8-bits</h5>
-              <p class="card-text">Sitio web para una empresa especializada en brindar soporte técnico integral en
-                computadoras.</p>
-              <a href="https://github.com/agustincomolli/8-bits" class="btn btn-secondary" target="_blank">Ver en
-                GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Back End</div>
-            <img src="../assets/images/8-bits-backend.webp" class="img-fluid" alt="Vista previa de 8-bits backend"
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/eightbits-terminal" target="_blank"
+            class="project-card">
+            <img src="../assets/images/eightbits-terminal.webp" alt="Vista previa de EightBits Terminal"
               loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">8-bits backend</h5>
-              <p class="card-text">API de backend construida con Python y Flask, implementando Flask-SQLAlchemy como
-                ORM
-                para la gestión de una base de datos MySQL.</p>
-              <a href="https://github.com/agustincomolli/8-bits-backend" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
+            <span class="project-badge project-badge--libreria">Librería</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">EightBits Terminal</h2>
+              <p class="project-card-text">Librería para interfaces de consola para Python.</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Tema de Color</div>
-            <img src="../assets/images/my-modern-dark-theme.webp" class="img-fluid" alt="Vista previa de My Theme Dark"
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/el-rincon-libros" target="_blank"
+            class="project-card">
+            <img src="../assets/images/el-rincon-libros.webp" alt="Vista previa de El Rincón de los Libros"
               loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">My Modern Theme Dark</h5>
-              <p class="card-text">Tema de color personalizado para Visual Studio Code.</p>
-              <a href="https://github.com/agustincomolli/my-theme-dark" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
+            <span class="project-badge project-badge--frontend">Frontend</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">El Rincón de los Libros</h2>
+              <p class="project-card-text">Frontend para una tienda de libros.</p>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="mb-4 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-          <div class="card h-100 w-100 mx-3 mx-sm-2 mx-md-1">
-            <div class="card-header">Juego</div>
-            <img src="../assets/images/alien-invasion.webp" class="img-fluid" alt="Vista previa de Invasión Alienígena"
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/le-chef-recetas" target="_blank"
+            class="project-card">
+            <img src="../assets/images/le-chef.webp" alt="Vista previa de Le Chef" loading="lazy">
+            <span class="project-badge project-badge--webapp">Web App</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">Le Chef - Recetas de cocina</h2>
+              <p class="project-card-text">Aplicación web para almacenar y compartir recetas de cocina.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Este es justo el proyecto de una empresa de soporte
+             técnico -- tu propio rubro real. Se deja con su propia
+             card, sin fusionarse con las demás. -->
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/8-bits" target="_blank"
+            class="project-card">
+            <img src="../assets/images/8-bits.webp" alt="Vista previa de 8-bits" loading="lazy">
+            <span class="project-badge project-badge--frontend">Frontend</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">8-bits</h2>
+              <p class="project-card-text">Sitio web para una empresa de soporte técnico integral en computadoras.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/8-bits-backend" target="_blank"
+            class="project-card">
+            <img src="../assets/images/8-bits-backend.webp" alt="Vista previa de 8-bits backend" loading="lazy">
+            <span class="project-badge project-badge--backend">Backend</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">8-bits backend</h2>
+              <p class="project-card-text">API con Python y Flask, Flask-SQLAlchemy como ORM para MySQL.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/my-theme-dark" target="_blank"
+            class="project-card">
+            <img src="../assets/images/my-modern-dark-theme.webp" alt="Vista previa de My Modern Theme Dark"
               loading="lazy">
-            <div class="card-body">
-              <h5 class="card-title">Invasión Alienígena</h5>
-              <p class="card-text">Un emocionante juego de arcade desarrollado en Python, donde defiendes la Tierra de
-                una invasión extraterrestre.</p>
-              <a href="https://github.com/agustincomolli/alien-invasion" class="btn btn-secondary" target="_blank">Ver
-                en
-                GitHub</a>
+            <span class="project-badge project-badge--tema">Tema de Color</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">My Modern Theme Dark</h2>
+              <p class="project-card-text">Tema de color personalizado para Visual Studio Code.</p>
             </div>
-          </div>
+          </a>
         </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="https://github.com/agustincomolli/alien-invasion" target="_blank"
+            class="project-card">
+            <img src="../assets/images/alien-invasion.webp" alt="Vista previa de Invasión Alienígena" loading="lazy">
+            <span class="project-badge project-badge--juego">Juego</span>
+            <span class="project-card-link-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+            <div class="project-card-body">
+              <h2 class="h5 project-card-title">Invasión Alienígena</h2>
+              <p class="project-card-text">Juego de arcade en Python: defendé la Tierra de una invasión
+                extraterrestre.</p>
+            </div>
+          </a>
+        </div>
+
       </div>
     </section>
   </main>
+
+  <a href="https://wa.me/5492226680056" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Escribime por WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+  </a>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 ms-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
         <img src="../assets/images/logo.png" class="rounded-2" alt="Logotipo" height="24">
       </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Agustín Comolli</span>
+      <span class="mb-3 mb-md-0 text-body-secondary">© <span id="copyright-year"></span> Agustín Comolli</span>
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
@@ -232,6 +257,7 @@
     </ul>
   </footer>
   <script src="../scripts/bootstrap.bundle.js"></script>
+  <script src="../scripts/whatsapp-float.js"></script>
 </body>
 
 </html>
