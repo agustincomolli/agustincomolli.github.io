@@ -157,6 +157,35 @@ h3,
   border: 4px solid var(--bs-primary);
 }
 
+/* Dos fotos, una por tema: se decide cuál mostrar con CSS puro
+   (sin JavaScript), leyendo el mismo atributo data-bs-theme que
+   ya usa cambia el resto del sitio de color. Como ese atributo
+   se aplica ni bien carga la página (antes de que se vea nada,
+   ver applyTheme() en change-theme.js), no hay ningún parpadeo
+   ni "salto" al elegir la foto correcta -- ya está decidido
+   desde el primer instante.
+
+   Por defecto (sin ningún data-bs-theme todavía resuelto) se
+   deja visible la de tema claro; los selectores de abajo pisan
+   ese default según corresponda. */
+.hero-photo--dark {
+  display: none;
+}
+
+[data-bs-theme="dark"] .hero-photo--light {
+  display: none;
+}
+
+[data-bs-theme="dark"] .hero-photo--dark {
+  /* "inline" y no "block": un <img> por defecto ya es inline, y
+     el centrado de la foto depende de text-align: center en el
+     contenedor (funciona sobre elementos inline, no sobre
+     elementos block). Con display: block, la imagen dejaba de
+     responder a ese centrado y se iba pegada al borde izquierdo
+     de la columna -- por eso se veía "corrida". */
+  display: inline;
+}
+
 
 /* -------------------------------------------------------------
    5. INSIGNIA DE DISPONIBILIDAD
